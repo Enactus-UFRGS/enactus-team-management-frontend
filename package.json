@@ -1,0 +1,24 @@
+{
+  "name": "enactus-tm-frontend",
+  "version": "1.0.0",
+  "description": "Enactus team management system frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enactus-UFRGS/enactus-team-management-frontend.git"
+  },
+  "keywords": [
+    "enactus",
+    "team",
+    "management"
+  ],
+  "author": "Guilherme Tassinari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enactus-UFRGS/enactus-team-management-frontend/issues"
+  },
+  "homepage": "https://github.com/Enactus-UFRGS/enactus-team-management-frontend#readme"
+}
