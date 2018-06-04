@@ -6,8 +6,8 @@ module.exports = function(/* environment, appConfig */) {
   // supported properties
 
   return {
-    name: "enactus-team-management-frontend",
-    short_name: "enactus-team-management-frontend",
+    name: "ETM",
+    short_name: "ETM",
     description: "",
     start_url: "/",
     display: "standalone",
@@ -15,8 +15,13 @@ module.exports = function(/* environment, appConfig */) {
     theme_color: "#fff",
     icons: [
       {
-        src: "/ember-welcome-page/images/construction.png",
-        sizes: "540x540",
+        src: "/assets/images/enactusLogo192.png",
+        sizes: "192x192",
+        type: "image/png"
+      },
+      {
+        src: "/assets/images/enactusLogo512.png",
+        sizes: "512x512",
         type: "image/png"
       }
     ],
