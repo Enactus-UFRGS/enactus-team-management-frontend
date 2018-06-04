@@ -1,5 +1,29 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div class="LandingPage layout layout-align-center-center">
+  {{#paper-card class="SignupCard" as |card|}}
+    {{#card.title as |title|}}
+      {{#title.text style="text-align: center;" as |text|}}
+        {{#text.headline}}
+          {{t "signup.form.title"}}
+        {{/text.headline}}
+      {{/title.text}}
+    {{/card.title}}
+    {{#card.content}}
+      {{#paper-form class="layout layout-column" as |form|}}
+        {{form.input class="flex-100" label=(capitalize-first-letter (t "name")) value=name onChange=(action (mut name))}}
+        {{form.input class="flex-100" label=(capitalize-first-letter (t "email")) type="email" value=email onChange=(action (mut email))}}
+      {{/paper-form}}
+    {{/card.content}}
+    {{#card.actions class="layout-column"}}
+      {{#paper-button raised=true class="SignupButton"}}
+        {{t "signup.form.submit"}}
+      {{/paper-button}}
+    {{/card.actions}}
+  {{/paper-card}}
+  <div class="EnactusUfrgsLogo hide-xs">
+    <img src="assets/images/logoEnactusUfrgs.png" alt="">
+  </div>
+</div>
+
+
 
 {{outlet}}
