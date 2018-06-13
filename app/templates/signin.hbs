@@ -1,0 +1,28 @@
+<div class="LandingPage layout layout-align-center-center">
+  {{#paper-card class="AuthenticationCard" as |card|}}
+    {{#card.title as |title|}}
+      {{#title.text style="text-align: center;" as |text|}}
+        {{#text.headline}}
+          {{t "signin.form.title"}}
+        {{/text.headline}}
+      {{/title.text}}
+    {{/card.title}}
+    {{#card.content}}
+      {{#paper-form class="layout layout-column" as |form|}}
+        {{form.input class="flex-100" label=(capitalize-first-letter (t "email")) type="email" value=email onChange=(action (mut email))}}
+        {{form.input class="flex-100" label=(capitalize-first-letter (t "password")) type="password" value=email onChange=(action (mut email))}}
+      {{/paper-form}}
+    {{/card.content}}
+    {{#card.actions class="layout-column"}}
+      {{#paper-button raised=true class="SignupButton"}}
+        {{t "signin.form.submit"}}
+      {{/paper-button}}
+      {{#paper-button href=(href-to "signup")}}
+        {{t "signin.form.signup"}}
+      {{/paper-button}}
+    {{/card.actions}}
+  {{/paper-card}}
+  <div class="EnactusUfrgsLogo hide-xs">
+    <img src="assets/images/logoEnactusUfrgs.png" alt="">
+  </div>
+</div>

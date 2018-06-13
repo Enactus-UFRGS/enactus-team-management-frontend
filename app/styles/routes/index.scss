@@ -1,0 +1,33 @@
+.HomePage {
+  &__Section {
+    box-sizing: border-box;
+    padding: 30px;
+    padding-left: 68vh;
+    min-height: 100vh;
+    background: url("./images/enactusLogoHuge.png");
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-position-x: -32vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media(max-width: 599px) {
+      background-size: 100vw;
+      background-position-x: center;
+      background-position-y: -60vw;
+      padding-left: 0;
+      padding-top: 40vw;
+    }
+  }
+}
+
+.SoftwareName {
+  @extend .c-secondary;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  font-size: 4em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
