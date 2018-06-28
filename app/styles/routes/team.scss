@@ -1,0 +1,15 @@
+.LastActivitiesCard {
+  width: 100%;
+  height: 100%;
+  md-card-title {
+    flex: inherit;
+  }
+  &__ActivitiesList {
+    overflow: scroll;
+    flex: 1;
+  }
+}
+
+.Container {
+  padding: 30px;
+}

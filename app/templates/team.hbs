@@ -1,0 +1,124 @@
+{{#paper-toolbar }}
+  {{#paper-toolbar-tools}}
+    {{#paper-button iconButton=true}}
+      {{paper-icon "menu"}}
+    {{/paper-button}}
+    <h2>
+      Enactus UFRGS + UERN
+    </h2>
+    <span class="flex"></span>
+    {{#paper-button iconButton=true}}
+      {{paper-icon "more_vert"}}
+    {{/paper-button}}
+  {{/paper-toolbar-tools}}
+{{/paper-toolbar}}
+
+<div class="Container">
+  {{#paper-grid-list
+    cols="1 md-2 gt-md-6"
+    rowHeight="gt-md-1:1 2:2"
+    gutter="12px gt-sm-8px" as |grid|}}
+
+    {{#grid.tile class="layout-align-center-start" rowspan="3" colspan="sm-1 gt-sm-2" as |tile|}}
+      {{#paper-card class="LastActivitiesCard" as |card|}}
+        {{#card.title as |title|}}
+          {{#title.text as |text|}}
+            {{#text.headline}}Last activities{{/text.headline}}
+            {{#text.subhead}}Here are the last activities your colleagues have accomplished{{/text.subhead}}
+          {{/title.text}}
+        {{/card.title}}
+        {{#card.content class="LastActivitiesCard__ActivitiesList"}}
+          {{#paper-list}}
+            {{#paper-item class="md-3-line"}}
+              <img src="assets/images/guilherme.jpg" class="md-avatar">
+              <div class="md-list-item-text">
+                <h3>Adicionou nova vaga no ubuntu</h3>
+                <h4>Guilherme Tassinari</h4>
+                <p>Adicionado novo card no Ubuntu. Vaga de emprego para imigrante. Desenvolvedor</p>
+              </div>
+              {{paper-divider}}
+            {{/paper-item}}
+            {{#paper-item class="md-3-line"}}
+              <img src="assets/images/rafaela.jpg" class="md-avatar">
+              <div class="md-list-item-text">
+                <h3>Fez mais um artigo pica das galáxias</h3>
+                <h4>Rafaela Trizotto</h4>
+                <p>Vai ganhar mais 3 prêmios. Mestre das escritas</p>
+              </div>
+              {{paper-divider}}
+            {{/paper-item}}
+            {{#paper-item class="md-3-line"}}
+              <img src="assets/images/filipe.jpg" class="md-avatar">
+              <div class="md-list-item-text">
+                <h3>Reestruturou o time do zero</h3>
+                <h4>Filipe Neto (sem cabelo rosa)</h4>
+                <p>Bicho é brabo. Carrega galera nas costas. Mito.</p>
+              </div>
+              {{paper-divider}}
+            {{/paper-item}}
+            {{#paper-item class="md-3-line"}}
+              <img src="assets/images/anne.jpg" class="md-avatar">
+              <div class="md-list-item-text">
+                <h3>Fez toda a pré auditoria</h3>
+                <h4>Anne Lima</h4>
+                <p>Essa aí eu venero. Fazer toda a pré auditoria? Não precisa dizer mais nada</p>
+              </div>
+              {{paper-divider}}
+            {{/paper-item}}
+          {{/paper-list}}
+        {{/card.content}}
+      {{/paper-card}}
+    {{/grid.tile}}
+
+    {{#grid.tile rowspan="1" colspan="sm-2 gt-sm-2" as |tile|}}
+      {{#paper-card class="LastActivitiesCard" as |card|}}
+        {{#card.content}}
+          {{high-charts chartOptions=mostActiveTeamsOptions content=mostActiveTeamsData}}
+        {{/card.content}}
+      {{/paper-card}}
+    {{/grid.tile}}
+
+    {{#grid.tile rowspan="1" colspan="sm-2 gt-sm-2" as |tile|}}
+      {{#paper-card class="LastActivitiesCard" as |card|}}
+        {{#card.content}}
+          {{high-charts chartOptions=mostActiveUsersOptions content=mostActiveUsersData}}
+        {{/card.content}}
+      {{/paper-card}}
+    {{/grid.tile}}
+
+    {{#grid.tile rowspan="1" colspan="sm-2 gt-sm-2" as |tile|}}
+      {{#paper-card class="LastActivitiesCard" as |card|}}
+        {{#card.content}}
+          {{high-charts chartOptions=hoursWorkedMonthlyOptions content=hoursWorkedMonthlyData}}
+        {{/card.content}}
+      {{/paper-card}}
+    {{/grid.tile}}
+
+    {{#grid.tile rowspan="1" colspan="sm-2 gt-sm-2" as |tile|}}
+      {{#paper-card class="LastActivitiesCard" as |card|}}
+        {{#card.content}}
+          {{high-charts chartOptions=yourHoursThisWeekOptions content=yourHoursThisWeekData}}
+        {{/card.content}}
+      {{/paper-card}}
+    {{/grid.tile}}
+
+    {{#grid.tile rowspan="1" colspan="sm-2 gt-sm-2" as |tile|}}
+      {{#paper-card class="LastActivitiesCard" as |card|}}
+        {{#card.content}}
+          {{high-charts chartOptions=moneyFlowChartOptions content=moneyFlowChartData}}
+        {{/card.content}}
+      {{/paper-card}}
+    {{/grid.tile}}
+
+    {{#grid.tile rowspan="1" colspan="sm-2 gt-sm-2" as |tile|}}
+      {{#paper-card class="LastActivitiesCard" as |card|}}
+        {{#card.content}}
+          {{high-charts chartOptions=accumulatedMoneyOptions content=accumulatedMoneyData}}
+        {{/card.content}}
+      {{/paper-card}}
+    {{/grid.tile}}
+
+  {{/paper-grid-list}}
+
+</div>
+
